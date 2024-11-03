@@ -1,9 +1,11 @@
 # Gestion de Projet Agile
 
 ## Description
+
 Ce projet est un système de gestion de projet agile conçu pour aider les équipes à planifier, suivre et gérer leurs projets de manière efficace. Il offre des fonctionnalités pour gérer des projets, des sprints, des tâches, des rôles d'utilisateurs et des commentaires, facilitant ainsi la collaboration et la transparence au sein des équipes.
 
 ## Fonctionnalités
+
 - Création et gestion de projets.
 - Organisation des projets en sprints.
 - Gestion des tâches avec assignation à des utilisateurs.
@@ -12,41 +14,43 @@ Ce projet est un système de gestion de projet agile conçu pour aider les équi
 - Suivi de l'avancement des projets et sprints.
 
 ## Technologies Utilisées
+
 - **Django** : Framework web pour le développement du backend.
 - **Django REST Framework** : Pour créer une API RESTful.
 - **MySQL** : Système de gestion de base de données.
 - **Python** : Langage de programmation principal utilisé.
 
 ## Prérequis
+
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
+
 - Python 3.x
 - Django
 - Django REST Framework
 - MySQL
 
-
-![Logo](./static/logo.png)
-
+![Logo](https://github.com/Azizjlassi2/SMT/blob/main/static/Logo.png)
 
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
-``SECRET_KEY`` 
+`SECRET_KEY`
 
-``DATABASE_ENGINE`` 
+`DATABASE_ENGINE`
 
-``DATABASE_NAME`` 
+`DATABASE_NAME`
 
-``DATABASE_USER`` 
+`DATABASE_USER`
 
-``DATABASE_USER_PASSWORD`` 
+`DATABASE_USER_PASSWORD`
 
-``DATABASE_HOST`` 
+`DATABASE_HOST`
 
-``DATABASE_PORT`` 
+`DATABASE_PORT`
 
-``STATIC_URL`` : URL for static files (ex: CSS ,JS ...)
+`STATIC_URL` : URL for static files (ex: CSS ,JS ...)
+
 ## Run Locally
 
 Clone the project
@@ -73,7 +77,6 @@ Start the server
   python manage.py runserver
 ```
 
-
 ## API Reference
 
 #### Get all projets
@@ -82,9 +85,9 @@ Start the server
   GET api/v1/projets/
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `None` | `None` | No parameters required. Returns a list of all projects. |
+| Parameter | Type   | Description                                             |
+| :-------- | :----- | :------------------------------------------------------ |
+| `None`    | `None` | No parameters required. Returns a list of all projects. |
 
 #### Get projet
 
@@ -92,19 +95,20 @@ Start the server
   GET /api/v1/projets/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the project to fetch. |
+| Parameter | Type      | Description                               |
+| :-------- | :-------- | :---------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the project to fetch. |
 
 #### Create a new projet
+
 ```http
   POST api/v1/projets/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `nom`      | `string` | **Required**.  Name of the new project. |
-| `description`      | `string` | **Optional**. Description of the new project. |
+| Parameter     | Type     | Description                                   |
+| :------------ | :------- | :-------------------------------------------- |
+| `nom`         | `string` | **Required**. Name of the new project.        |
+| `description` | `string` | **Optional**. Description of the new project. |
 
 #### Update a projet
 
@@ -112,11 +116,11 @@ Start the server
   PUT /api/v1/projets/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the project to update. |
-| `nom`      | `string` | **Optional**.  Name of the new project. |
-| `description`      | `string` | **Optional**. Description of the new project. |
+| Parameter     | Type      | Description                                   |
+| :------------ | :-------- | :-------------------------------------------- |
+| `id`          | `integer` | **Required**. Id of the project to update.    |
+| `nom`         | `string`  | **Optional**. Name of the new project.        |
+| `description` | `string`  | **Optional**. Description of the new project. |
 
 #### Delete a projet
 
@@ -124,26 +128,9 @@ Start the server
   DELETE /api/v1/projets/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the project to delete. |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Parameter | Type      | Description                                |
+| :-------- | :-------- | :----------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the project to delete. |
 
 #### Get all sprints
 
@@ -151,9 +138,9 @@ Start the server
   GET api/v1/sprints/
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `None` | `None` | No parameters required. Returns a list of all sprints. |
+| Parameter | Type   | Description                                            |
+| :-------- | :----- | :----------------------------------------------------- |
+| `None`    | `None` | No parameters required. Returns a list of all sprints. |
 
 #### Get sprint
 
@@ -161,21 +148,22 @@ Start the server
   GET /api/v1/sprints/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the sprint to fetch. |
+| Parameter | Type      | Description                              |
+| :-------- | :-------- | :--------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the sprint to fetch. |
 
 #### Create a new sprint
+
 ```http
   POST api/v1/sprints/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `nom`      | `string` | **Required**.  Name of the new sprint. |
-| `projet`      | `integer` | **Required**. Id of the project to link. |
-| `date_debut`      | `date` | **Required**. Start date of the sprint. |
-| `date_fin`      | `date` | **Required**.  End date of the sprint. |
+| Parameter    | Type      | Description                              |
+| :----------- | :-------- | :--------------------------------------- |
+| `nom`        | `string`  | **Required**. Name of the new sprint.    |
+| `projet`     | `integer` | **Required**. Id of the project to link. |
+| `date_debut` | `date`    | **Required**. Start date of the sprint.  |
+| `date_fin`   | `date`    | **Required**. End date of the sprint.    |
 
 #### Update a sprint
 
@@ -183,41 +171,23 @@ Start the server
   PUT /api/v1/sprints/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the project to update. |
-| `nom`      | `string` | **Optional**.  Name of the new sprint. |
-| `projet`      | `integer` | **Optional**. Id of the project to link. |
-| `date_debut`      | `date` | **Optional**. Start date of the sprint. |
-| `date_fin`      | `date` | **Optional**.  End date of the sprint. |
+| Parameter    | Type      | Description                                |
+| :----------- | :-------- | :----------------------------------------- |
+| `id`         | `integer` | **Required**. Id of the project to update. |
+| `nom`        | `string`  | **Optional**. Name of the new sprint.      |
+| `projet`     | `integer` | **Optional**. Id of the project to link.   |
+| `date_debut` | `date`    | **Optional**. Start date of the sprint.    |
+| `date_fin`   | `date`    | **Optional**. End date of the sprint.      |
 
 #### Delete a sprint
-
 
 ```http
   DELETE /api/v1/sprints/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the sprint to delete. |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Parameter | Type      | Description                               |
+| :-------- | :-------- | :---------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the sprint to delete. |
 
 #### Get all tasks
 
@@ -225,64 +195,54 @@ Start the server
   GET api/v1/taches/
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `None` | `None` | No parameters required. Returns a list of all tasks . |
+| Parameter | Type   | Description                                           |
+| :-------- | :----- | :---------------------------------------------------- |
+| `None`    | `None` | No parameters required. Returns a list of all tasks . |
 
-#### Get task 
+#### Get task
 
 ```http
   GET /api/v1/taches/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the task  to fetch. |
+| Parameter | Type      | Description                            |
+| :-------- | :-------- | :------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the task to fetch. |
 
-#### Create a new task 
+#### Create a new task
+
 ```http
-  POST api/v1/taches/   
+  POST api/v1/taches/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `nom`      | `string` | **Required**.  Name of the new task . |
-| `sprint`      | `integer` | **Required**. Id of the sprint to link. |
-| `date_debut`      | `string` | **Required**. Status of the task (e.g., "À faire", "En cours", "Terminé"). |
+| Parameter    | Type      | Description                                                                |
+| :----------- | :-------- | :------------------------------------------------------------------------- |
+| `nom`        | `string`  | **Required**. Name of the new task .                                       |
+| `sprint`     | `integer` | **Required**. Id of the sprint to link.                                    |
+| `date_debut` | `string`  | **Required**. Status of the task (e.g., "À faire", "En cours", "Terminé"). |
 
-
-#### Update a task 
+#### Update a task
 
 ```http
   PUT /api/v1/taches/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the task  to update. |
-| `nom`      | `string` | **Optional**.  Name of the new task . |
-| `sprint`      | `integer` | **Optional**. Id of the sprint to link. |
-| `date_debut`      | `string` | **Optional**. Status of the task (e.g., "À faire", "En cours", "Terminé"). |
+| Parameter    | Type      | Description                                                                |
+| :----------- | :-------- | :------------------------------------------------------------------------- |
+| `id`         | `integer` | **Required**. Id of the task to update.                                    |
+| `nom`        | `string`  | **Optional**. Name of the new task .                                       |
+| `sprint`     | `integer` | **Optional**. Id of the sprint to link.                                    |
+| `date_debut` | `string`  | **Optional**. Status of the task (e.g., "À faire", "En cours", "Terminé"). |
 
-#### Delete a task 
-
+#### Delete a task
 
 ```http
   DELETE /api/v1/taches/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the task  to delete. |
-
-
-
-
-
-
-
-
-
+| Parameter | Type      | Description                             |
+| :-------- | :-------- | :-------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the task to delete. |
 
 #### Get all commentaires
 
@@ -290,57 +250,52 @@ Start the server
   GET api/v1/commentaires/
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `None` | `None` | No parameters required. Returns a list of all comments . |
+| Parameter | Type   | Description                                              |
+| :-------- | :----- | :------------------------------------------------------- |
+| `None`    | `None` | No parameters required. Returns a list of all comments . |
 
-#### Get task 
+#### Get task
 
 ```http
   GET /api/v1/commentaires/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the comment  to fetch. |
+| Parameter | Type      | Description                               |
+| :-------- | :-------- | :---------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the comment to fetch. |
 
-#### Create a new task 
+#### Create a new task
+
 ```http
-  POST api/v1/commentaires/   
+  POST api/v1/commentaires/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `contenu`      | `string` | **Required**.   Content of the new comment. |
-| `tache`      | `integer` | **Required**. Id of the task to link. |
+| Parameter | Type      | Description                               |
+| :-------- | :-------- | :---------------------------------------- |
+| `contenu` | `string`  | **Required**. Content of the new comment. |
+| `tache`   | `integer` | **Required**. Id of the task to link.     |
 
-
-
-#### Update a task 
+#### Update a task
 
 ```http
   PUT /api/v1/commentaires/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the comment  to update. |
-| `contenu`      | `string` | **Optional**.   Content of the new comment. |
+| Parameter | Type      | Description                                |
+| :-------- | :-------- | :----------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the comment to update. |
+| `contenu` | `string`  | **Optional**. Content of the new comment.  |
 
-
-#### Delete a task 
-
+#### Delete a task
 
 ```http
   DELETE /api/v1/commentaires/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `integer` | **Required**.  Id of the comment  to delete. |
-
+| Parameter | Type      | Description                                |
+| :-------- | :-------- | :----------------------------------------- |
+| `id`      | `integer` | **Required**. Id of the comment to delete. |
 
 ## 🔗 Links
+
 [![linkedin ](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamed-aziz-jlassi/)
-
-
