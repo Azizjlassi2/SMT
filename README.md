@@ -1,5 +1,7 @@
 # Gestion de Projet Agile
 
+![Logo](https://github.com/Azizjlassi2/SMT/blob/main/static/Logo.png)
+
 ## Description
 
 Ce projet est un système de gestion de projet agile conçu pour aider les équipes à planifier, suivre et gérer leurs projets de manière efficace. Il offre des fonctionnalités pour gérer des projets, des sprints, des tâches, des rôles d'utilisateurs et des commentaires, facilitant ainsi la collaboration et la transparence au sein des équipes.
@@ -28,8 +30,6 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 - Django
 - Django REST Framework
 - MySQL
-
-![Logo](https://github.com/Azizjlassi2/SMT/blob/main/static/Logo.png)
 
 ## Environment Variables
 
