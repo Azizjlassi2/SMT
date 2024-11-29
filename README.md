@@ -4,7 +4,7 @@
 
 ## Description
 
-Ce projet est un système de gestion de projet agile conçu pour aider les équipes à planifier, suivre et gérer leurs projets de manière efficace. Il offre des fonctionnalités pour gérer des projets, des sprints, des tâches, des rôles d'utilisateurs et des commentaires, facilitant ainsi la collaboration et la transparence au sein des équipes.
+Ce projet est un API pour un système de gestion de projet agile conçu pour aider les équipes à planifier, suivre et gérer leurs projets de manière efficace. Il offre des fonctionnalités pour gérer des projets, des sprints, des tâches, des rôles d'utilisateurs et des commentaires, facilitant ainsi la collaboration et la transparence au sein des équipes.
 
 ## Fonctionnalités
 
@@ -35,9 +35,9 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`SECRET_KEY`
+`SECRET_KEY` 
 
-`DATABASE_ENGINE`
+`DATABASE_ENGINE` Exemples (PosgreSQL : "django.db.backends.postgresql", MySQL : "django.db.backends.mysql" ...) check [![Django Documentaion](https://docs.djangoproject.com/en/5.1/ref/databases/) for more details.
 
 `DATABASE_NAME`
 
@@ -49,7 +49,7 @@ To run this project, you will need to add the following environment variables to
 
 `DATABASE_PORT`
 
-`STATIC_URL` : URL for static files (ex: CSS ,JS ...)
+`STATIC_URL` : URL for static files (CSS ,JS ...) Exemples ( "static/")
 
 ## Run Locally
 
