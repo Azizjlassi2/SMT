@@ -37,7 +37,7 @@ To run this project, you will need to add the following environment variables to
 
 `SECRET_KEY` 
 
-`DATABASE_ENGINE` Exemples (PosgreSQL : "django.db.backends.postgresql", MySQL : "django.db.backends.mysql" ...) check [![Django Documentaion](https://docs.djangoproject.com/en/5.1/ref/databases/) for more details.
+`DATABASE_ENGINE` Exemples (PosgreSQL : "django.db.backends.postgresql", MySQL : "django.db.backends.mysql" ...) check [Django Documentaion](https://docs.djangoproject.com/en/5.1/ref/databases/) for more details.
 
 `DATABASE_NAME`
 
